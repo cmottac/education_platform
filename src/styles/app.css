@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --blu: #4361ee;
+  --verde: #06d6a0;
+  --rosso: #ef476f;
+  --giallo: #ffd166;
+  --viola: #7b2d8b;
+  --sfondo: #f0f4ff;
+  --card: #ffffff;
+  --testo: #1a1a2e;
+  --raggio: 20px;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--sfondo);
+  color: var(--testo);
+  min-height: 100vh;
+}
+
+/* ── LAYOUT ── */
+.app { display: flex; flex-direction: column; min-height: 100vh; }
+
+.app-header {
+  background: var(--blu);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(67,97,238,0.3);
+}
+
+.app-logo { font-size: 1.5rem; font-weight: 900; }
+
+.app-main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+/* ── PROBLEM CARD ── */
+.problem-card {
+  background: var(--card);
+  border-radius: var(--raggio);
+  padding: 2rem;
+  max-width: 680px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.problem-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.categoria-badge {
+  background: var(--sfondo);
+  border-radius: 50px;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.punteggio-header { font-weight: 700; color: var(--blu); font-size: 1rem; }
+
+.problem-titolo {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 1.2rem;
+  color: var(--blu);
+}
+
+.problem-body {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 1.8rem;
+}
+
+.problem-body p { margin-bottom: 0.5rem; }
+
+/* ── CHOICES ── */
+.choices {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.choice-btn {
+  background: var(--sfondo);
+  border: 3px solid transparent;
+  border-radius: var(--raggio);
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.choice-btn:hover:not(:disabled) {
+  background: var(--giallo);
+  border-color: var(--blu);
+  transform: scale(1.04);
+}
+
+.choice-btn.corretta { background: var(--verde); color: white; border-color: var(--verde); }
+.choice-btn.sbagliata { background: var(--rosso); color: white; border-color: var(--rosso); }
+.choice-btn:disabled { cursor: default; }
+
+/* ── FEEDBACK ── */
+.feedback {
+  border-radius: var(--raggio);
+  padding: 1.2rem 1.5rem;
+  text-align: center;
+  animation: popIn 0.3s ease;
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.feedback-ok { background: #e8fdf5; border: 3px solid var(--verde); }
+.feedback-no { background: #fff0f3; border: 3px solid var(--rosso); }
+
+.feedback-frase { font-size: 1.5rem; font-weight: 900; margin-bottom: 0.5rem; }
+.stelle { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.punti-guadagnati { font-size: 1.1rem; font-weight: 700; color: var(--blu); }
+.bonus-streak { font-size: 1rem; font-weight: 700; color: var(--rosso); margin-top: 0.2rem; }
+.spiegazione { font-size: 1rem; margin: 0.8rem 0; color: #555; font-style: italic; }
+
+.btn-avanti {
+  background: var(--blu);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background 0.15s;
+}
+.btn-avanti:hover { background: var(--viola); }
+
+/* ── HEADER BUTTONS ── */
+.btn-dashboard {
+  background: white;
+  color: var(--blu);
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+
+/* ── BADGE POPUP ── */
+.badge-popup {
+  background: var(--giallo);
+  text-align: center;
+  padding: 0.7rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  animation: slideIn 0.3s ease;
+}
+
+/* ── DASHBOARD ── */
+.dashboard {
+  background: var(--card);
+  border-radius: var(--raggio);
+  padding: 2rem;
+  max-width: 760px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard h2 { font-size: 1.5rem; font-weight: 900; color: var(--blu); }
+.dashboard h3 { font-size: 1.1rem; font-weight: 700; margin: 1.2rem 0 0.6rem; color: var(--viola); }
+
+.btn-chiudi {
+  background: var(--sfondo);
+  border: none;
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.stat-box {
+  background: var(--sfondo);
+  border-radius: var(--raggio);
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-num { font-size: 2rem; font-weight: 900; color: var(--blu); }
+.stat-label { font-size: 0.85rem; color: #666; }
+
+.badges-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.badge {
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.badge-attivo { background: var(--giallo); color: var(--testo); }
+.badge-inattivo { background: #eee; color: #aaa; }
+
+.categorie-grid { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.categoria-row {
+  display: flex;
+  justify-content: space-between;
+  background: var(--sfondo);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.tabella-problemi {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.tabella-problemi th {
+  background: var(--sfondo);
+  padding: 0.5rem 0.8rem;
+  text-align: left;
+  font-weight: 700;
+}
+
+.tabella-problemi td {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid #eee;
+}
+
+.btn-reset {
+  margin-top: 1.5rem;
+  background: var(--rosso);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.6rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+
+/* ── FINE PROBLEMI ── */
+.fine-problemi {
+  text-align: center;
+  padding: 3rem;
+  background: var(--card);
+  border-radius: var(--raggio);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.fine-problemi h2 { font-size: 2rem; font-weight: 900; color: var(--blu); margin-bottom: 1rem; }
+.fine-problemi p { font-size: 1.2rem; margin-bottom: 0.5rem; }
