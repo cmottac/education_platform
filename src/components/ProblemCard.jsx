@@ -5,6 +5,7 @@ import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ChoiceButtons from './ChoiceButtons';
 import TrascinaAbbina from './TrascinaAbbina';
+import FormaGruppi from './FormaGruppi';
 import Feedback from './Feedback';
 
 const CATEGORIA_EMOJI = {
@@ -83,6 +84,16 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
           elementi={problema.elementi}
           categorie={problema.categorie}
           risposta={problema.risposta}
+          onRisposta={handleTrascina}
+          completato={corretto === true}
+        />
+      )}
+
+      {tipo === 'forma-gruppi' && (
+        <FormaGruppi
+          oggettoEmoji={problema.oggetto}
+          totale={problema.totale}
+          gruppi={problema.gruppi}
           onRisposta={handleTrascina}
           completato={corretto === true}
         />

@@ -253,6 +253,53 @@ body {
   align-self: flex-start;
 }
 
+/* ── CERCA / VAI A ── */
+.cerca-wrapper { position: relative; }
+
+.cerca-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: var(--raggio);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  width: 300px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.cerca-input {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  font-family: 'Nunito', sans-serif;
+  border: none;
+  border-bottom: 2px solid var(--sfondo);
+  outline: none;
+}
+
+.cerca-risultati { max-height: 260px; overflow-y: auto; }
+
+.cerca-item {
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition: background 0.1s;
+}
+.cerca-item:hover { background: var(--sfondo); }
+
+.cerca-id {
+  background: var(--blu);
+  color: white;
+  border-radius: 50px;
+  padding: 0.1rem 0.5rem;
+  font-size: 0.8rem;
+  margin-right: 0.4rem;
+}
+
+.cerca-vuoto { padding: 0.8rem 1rem; color: #aaa; font-size: 0.9rem; }
+
 /* ── HEADER BUTTONS ── */
 .btn-dashboard {
   background: white;
@@ -382,6 +429,54 @@ body {
   font-family: 'Nunito', sans-serif;
   cursor: pointer;
 }
+
+/* ── FORMA GRUPPI ── */
+.gruppi-container { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.gruppi-serbatoio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-height: 56px;
+  background: var(--sfondo);
+  border-radius: var(--raggio);
+  padding: 0.8rem;
+  align-items: center;
+}
+
+.gruppi-item {
+  font-size: 1.8rem;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.1s;
+  display: inline-block;
+}
+.gruppi-item:active { transform: scale(1.2); cursor: grabbing; }
+
+.gruppi-cesti {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.8rem;
+}
+
+.gruppi-cesto {
+  border: 3px dashed #ccc;
+  border-radius: var(--raggio);
+  padding: 0.7rem;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  transition: border-color 0.15s;
+}
+.gruppi-cesto:hover { border-color: var(--blu); }
+.cesto-ok { border-color: var(--verde) !important; background: #e8fdf5; }
+.cesto-no { border-color: var(--rosso) !important; background: #fff0f3; }
+
+.cesto-label { font-size: 0.8rem; font-weight: 700; color: #888; }
+.cesto-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.2rem; }
+.cesto-count { font-size: 1.1rem; font-weight: 900; color: var(--blu); }
 
 /* ── TRASCINA ABBINA ── */
 .trascina-container { display: flex; flex-direction: column; gap: 1.2rem; }
