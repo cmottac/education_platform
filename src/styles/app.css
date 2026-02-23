@@ -39,8 +39,9 @@ body {
 .app-main {
   flex: 1;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 2rem 1rem;
 }
 
@@ -159,6 +160,98 @@ body {
   transition: background 0.15s;
 }
 .btn-avanti:hover { background: var(--viola); }
+
+/* ── HEADER ACTIONS ── */
+.header-actions { display: flex; align-items: center; gap: 1rem; }
+.punteggio-header-main { font-weight: 700; color: white; }
+
+/* ── BENVENUTO ── */
+.benvenuto {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sfondo);
+}
+
+.benvenuto-card {
+  background: white;
+  border-radius: var(--raggio);
+  padding: 3rem 2.5rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  max-width: 420px;
+  width: 100%;
+}
+
+.benvenuto-emoji { font-size: 4rem; margin-bottom: 1rem; }
+.benvenuto-card h1 { font-size: 2rem; font-weight: 900; color: var(--blu); margin-bottom: 0.5rem; }
+.benvenuto-card p { font-size: 1.2rem; margin-bottom: 1.5rem; color: #555; }
+
+.benvenuto-input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-size: 1.3rem;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  border: 3px solid #ddd;
+  border-radius: var(--raggio);
+  margin-bottom: 1.2rem;
+  outline: none;
+  text-align: center;
+  transition: border-color 0.15s;
+}
+.benvenuto-input:focus { border-color: var(--blu); }
+
+/* ── SCELTA AMBITO ── */
+.scelta-ambito { width: 100%; max-width: 760px; }
+.scelta-ambito h2 { font-size: 1.5rem; font-weight: 900; margin-bottom: 1.5rem; color: var(--blu); text-align: center; }
+
+.ambiti-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.ambito-card {
+  background: white;
+  border: 3px solid transparent;
+  border-radius: var(--raggio);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: all 0.15s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+  position: relative;
+}
+
+.ambito-card:hover:not(.ambito-vuoto) { border-color: var(--blu); transform: translateY(-3px); }
+.ambito-attivo { border-color: var(--blu) !important; background: #eef1ff; }
+.ambito-completato { border-color: var(--verde) !important; }
+.ambito-vuoto { opacity: 0.45; cursor: default; }
+
+.ambito-emoji { font-size: 2.5rem; }
+.ambito-label { font-size: 1rem; font-weight: 900; color: var(--testo); }
+.ambito-progress { font-size: 0.85rem; color: #888; font-weight: 700; }
+.ambito-presto { font-size: 0.75rem; color: #aaa; font-style: italic; }
+.ambito-check { position: absolute; top: 0.5rem; right: 0.7rem; color: var(--verde); font-size: 1.1rem; font-weight: 900; }
+
+.btn-cambia-ambito {
+  background: none;
+  border: none;
+  color: var(--blu);
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  padding: 0;
+  align-self: flex-start;
+}
 
 /* ── HEADER BUTTONS ── */
 .btn-dashboard {
@@ -289,6 +382,70 @@ body {
   font-family: 'Nunito', sans-serif;
   cursor: pointer;
 }
+
+/* ── TRASCINA ABBINA ── */
+.trascina-container { display: flex; flex-direction: column; gap: 1.2rem; }
+
+.trascina-elementi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  min-height: 52px;
+  background: var(--sfondo);
+  border-radius: var(--raggio);
+  padding: 0.8rem;
+}
+
+.trascina-chip {
+  background: var(--blu);
+  color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.15s;
+}
+
+.trascina-chip:active { cursor: grabbing; transform: scale(1.08); }
+.trascina-chip.abbinato { background: var(--viola); cursor: pointer; }
+.trascina-chip.corretta { background: var(--verde) !important; }
+.trascina-chip.sbagliata { background: var(--rosso) !important; }
+
+.trascina-categorie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.trascina-zona {
+  border: 3px dashed #ccc;
+  border-radius: var(--raggio);
+  padding: 0.8rem;
+  min-height: 100px;
+  transition: border-color 0.15s;
+}
+
+.trascina-zona:hover { border-color: var(--blu); }
+.trascina-zona-label { font-weight: 900; font-size: 1rem; margin-bottom: 0.6rem; color: var(--viola); }
+.trascina-zona-items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+.btn-verifica {
+  background: var(--verde);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  align-self: center;
+  transition: background 0.15s;
+}
+.btn-verifica:disabled { background: #ccc; cursor: default; }
+.btn-verifica:not(:disabled):hover { background: var(--blu); }
 
 /* ── FINE PROBLEMI ── */
 .fine-problemi {

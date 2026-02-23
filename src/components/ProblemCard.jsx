@@ -4,6 +4,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
 import ChoiceButtons from './ChoiceButtons';
+import TrascinaAbbina from './TrascinaAbbina';
 import Feedback from './Feedback';
 
 const CATEGORIA_EMOJI = {
@@ -13,6 +14,7 @@ const CATEGORIA_EMOJI = {
   divisione: '➗',
   logica: '🧠',
   geometria: '📐',
+  scienza: '🔬',
 };
 
 export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) {
@@ -21,21 +23,33 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
   const [corretto, setCorretto] = useState(null);
   const [risultato, setRisultato] = useState(null);
 
-  const handleRisposta = (scelta) => {
-    const ok = String(scelta) === String(problema.risposta);
-    const nuoviTentativi = tentativi + 1;
-    setTentativi(nuoviTentativi);
+  const tipo = problema.tipo ?? 'scelta-multipla';
+
+  const registraRisultato = (ok, nuoviTentativi, scelta) => {
     setSelezionato(scelta);
     setCorretto(ok);
     if (ok) {
       const res = onCompleto(problema.id, nuoviTentativi, problema.punti, false);
-      setRisultato(res);
+      setRisultato(res ?? {});
+    } else {
+      setRisultato({});
     }
   };
 
-  const handleAvanti = () => {
-    onCompleto(problema.id, tentativi, problema.punti, true);
+  const handleSceltaMultipla = (scelta) => {
+    const ok = String(scelta) === String(problema.risposta);
+    const nuoviTentativi = tentativi + 1;
+    setTentativi(nuoviTentativi);
+    registraRisultato(ok, nuoviTentativi, scelta);
   };
+
+  const handleTrascina = (ok) => {
+    const nuoviTentativi = tentativi + 1;
+    setTentativi(nuoviTentativi);
+    registraRisultato(ok, nuoviTentativi, ok);
+  };
+
+  const handleAvanti = () => onCompleto(problema.id, tentativi, problema.punti, true);
 
   return (
     <div className="problem-card">
@@ -54,13 +68,25 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
         </ReactMarkdown>
       </div>
 
-      <ChoiceButtons
-        scelte={problema.scelte}
-        onRisposta={handleRisposta}
-        disabilitati={corretto === true}
-        selezionato={selezionato}
-        corretta={problema.risposta}
-      />
+      {tipo === 'scelta-multipla' && (
+        <ChoiceButtons
+          scelte={problema.scelte}
+          onRisposta={handleSceltaMultipla}
+          disabilitati={corretto === true}
+          selezionato={selezionato}
+          corretta={problema.risposta}
+        />
+      )}
+
+      {tipo === 'trascina-abbina' && (
+        <TrascinaAbbina
+          elementi={problema.elementi}
+          categorie={problema.categorie}
+          risposta={problema.risposta}
+          onRisposta={handleTrascina}
+          completato={corretto === true}
+        />
+      )}
 
       {corretto !== null && (
         <Feedback

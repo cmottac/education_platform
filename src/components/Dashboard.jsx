@@ -1,6 +1,6 @@
 import { BADGES } from '../engine/progressStore';
 
-export default function Dashboard({ progress, problemi, onReset, onChiudi }) {
+export default function Dashboard({ progress, problemi, nome, onReset, onChiudi }) {
   const completati = Object.entries(progress.completed);
   const perCategoria = {};
   completati.forEach(([id]) => {
@@ -11,7 +11,7 @@ export default function Dashboard({ progress, problemi, onReset, onChiudi }) {
   return (
     <div className="dashboard">
       <div className="dashboard-header">
-        <h2>📊 Dashboard Genitore</h2>
+        <h2>📊 Dashboard di {nome}</h2>
         <button className="btn-chiudi" onClick={onChiudi}>✕ Chiudi</button>
       </div>
 
