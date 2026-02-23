@@ -7,6 +7,8 @@ import ChoiceButtons from './ChoiceButtons';
 import TrascinaAbbina from './TrascinaAbbina';
 import FormaGruppi from './FormaGruppi';
 import Bilancia from './Bilancia';
+import Calcolatrice from './Calcolatrice';
+import CalcolatriceLibera from './CalcolatriceLibera';
 import Feedback from './Feedback';
 
 const CATEGORIA_EMOJI = {
@@ -107,6 +109,23 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
           onRisposta={handleTrascina}
           completato={corretto === true}
           impossibile={problema.impossibile ?? false}
+        />
+      )}
+
+      {tipo === 'calcolatrice' && (
+        <Calcolatrice
+          numeri={problema.numeri}
+          operazioneCorretta={problema.operazione_corretta}
+          onRisposta={handleTrascina}
+          completato={corretto === true}
+        />
+      )}
+
+      {tipo === 'calcolatrice-libera' && (
+        <CalcolatriceLibera
+          risposta={problema.risposta}
+          onRisposta={handleTrascina}
+          completato={corretto === true}
         />
       )}
 

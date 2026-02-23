@@ -430,6 +430,75 @@ body {
   cursor: pointer;
 }
 
+/* ── CALCOLATRICE ── */
+.calcolatrice { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+
+.calc-display {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--testo);
+  color: white;
+  border-radius: var(--raggio);
+  padding: 1rem 1.8rem;
+  font-size: 2rem;
+  font-weight: 900;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.calc-numero { color: var(--giallo); }
+.calc-op-display { color: #aef; min-width: 1.5rem; text-align: center; }
+.calc-uguale { color: #aaa; }
+.calc-risultato { color: var(--verde); min-width: 3rem; text-align: left; }
+
+.calc-input {
+  width: 80px;
+  background: #1a1a2e;
+  color: var(--giallo);
+  border: 2px solid #444;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  padding: 0.2rem 0.4rem;
+  outline: none;
+}
+.calc-input:focus { border-color: var(--blu); }
+.calc-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+.calc-risposta-finale {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.calc-risposta-finale label { font-weight: 700; font-size: 1rem; }
+
+.calc-operazioni {
+  display: flex;
+  gap: 1rem;
+}
+
+.calc-btn {
+  width: 64px;
+  height: 64px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: 'Nunito', sans-serif;
+  border: 3px solid transparent;
+  border-radius: var(--raggio);
+  background: var(--sfondo);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.calc-btn:hover:not(:disabled) { background: var(--giallo); border-color: var(--blu); transform: scale(1.08); }
+.calc-btn-attivo { background: var(--blu) !important; color: white; border-color: var(--blu) !important; }
+.calc-btn.corretta { background: var(--verde) !important; color: white; }
+.calc-btn.sbagliata { background: var(--rosso) !important; color: white; }
+
 /* ── BILANCIA ── */
 .bilancia-container { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 
