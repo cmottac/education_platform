@@ -1,7 +1,7 @@
 ---
 id: "033"
 titolo: Dividi le mele nei cesti
-categoria: divisione
+categoria: operazioni
 difficolta: 2
 punti: 15
 tipo: forma-gruppi

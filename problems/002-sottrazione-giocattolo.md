@@ -1,7 +1,7 @@
 ---
 id: "002"
 titolo: Il giocattolo di Luca
-categoria: sottrazione
+categoria: operazioni
 difficolta: 1
 punti: 10
 scelte: [3, 5, 13, 20]

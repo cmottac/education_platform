@@ -1,7 +1,7 @@
 ---
 id: "011"
 titolo: I palloncini della festa
-categoria: sottrazione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [6, 8, 14, 24]

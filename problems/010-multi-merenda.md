@@ -1,7 +1,7 @@
 ---
 id: "010"
 titolo: La merenda a scuola
-categoria: divisione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [5, 6, 7, 9]

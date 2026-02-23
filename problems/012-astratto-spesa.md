@@ -1,7 +1,7 @@
 ---
 id: "012"
 titolo: La spesa al mercato
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [9, 11, 21, 27]

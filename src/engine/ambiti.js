@@ -1,5 +1,5 @@
 export const AMBITI = [
-  { id: 'matematica', label: 'Matematica',  emoji: '🔢', categorie: ['addizione', 'sottrazione', 'moltiplicazione', 'divisione'] },
+  { id: 'matematica', label: 'Matematica',  emoji: '🔢', categorie: ['operazioni'] },
   { id: 'scienze',    label: 'Scienze',     emoji: '🔬', categorie: ['scienza'] },
   { id: 'logica',     label: 'Logica',      emoji: '🧠', categorie: ['logica'] },
   { id: 'geometria',  label: 'Geometria',   emoji: '📐', categorie: ['geometria'] },

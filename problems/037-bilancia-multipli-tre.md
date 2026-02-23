@@ -1,7 +1,7 @@
 ---
 id: "037"
 titolo: Solo pesi da 3
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 3
 punti: 20
 tipo: bilancia

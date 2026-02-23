@@ -1,7 +1,7 @@
 ---
 id: "006"
 titolo: Le figurine
-categoria: sottrazione
+categoria: operazioni
 difficolta: 1
 punti: 10
 scelte: [4, 6, 19, 35]

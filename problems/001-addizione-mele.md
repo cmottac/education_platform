@@ -1,7 +1,7 @@
 ---
 id: "001"
 titolo: Le mele nel cestino
-categoria: addizione
+categoria: operazioni
 difficolta: 1
 punti: 10
 scelte: [3, 5, 7, 12]

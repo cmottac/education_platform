@@ -1,7 +1,7 @@
 ---
 id: "014"
 titolo: Il film di Luca
-categoria: sottrazione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [35, 45, 55, 65]

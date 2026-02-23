@@ -1,7 +1,7 @@
 ---
 id: "035"
 titolo: Bilancia il peso
-categoria: addizione
+categoria: operazioni
 difficolta: 2
 punti: 15
 tipo: bilancia

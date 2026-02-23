@@ -1,7 +1,7 @@
 ---
 id: "036"
 titolo: La bilancia del mercato
-categoria: addizione
+categoria: operazioni
 difficolta: 3
 punti: 20
 tipo: bilancia

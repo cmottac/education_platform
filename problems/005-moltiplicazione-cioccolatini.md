@@ -1,7 +1,7 @@
 ---
 id: "005"
 titolo: I cioccolatini
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 2
 punti: 15
 scelte: [10, 14, 20, 24]

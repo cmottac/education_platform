@@ -1,7 +1,7 @@
 ---
 id: "013"
 titolo: La torta di compleanno
-categoria: divisione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [2, 3, 4, 6]

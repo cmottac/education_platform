@@ -1,7 +1,7 @@
 ---
 id: "003"
 titolo: Le zampe dei cani
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 1
 punti: 10
 scelte: [7, 8, 12, 16]

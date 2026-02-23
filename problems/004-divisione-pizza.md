@@ -1,7 +1,7 @@
 ---
 id: "004"
 titolo: La pizza degli amici
-categoria: divisione
+categoria: operazioni
 difficolta: 1
 punti: 10
 scelte: [2, 3, 4, 24]

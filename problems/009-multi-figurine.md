@@ -1,7 +1,7 @@
 ---
 id: "009"
 titolo: Le figurine di Marco e Luca
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 3
 punti: 20
 scelte: [6, 10, 14, 18]

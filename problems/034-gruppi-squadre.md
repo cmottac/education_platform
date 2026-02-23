@@ -1,7 +1,7 @@
 ---
 id: "034"
 titolo: Le squadre di calcio
-categoria: moltiplicazione
+categoria: operazioni
 difficolta: 2
 punti: 15
 tipo: forma-gruppi
