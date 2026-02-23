@@ -6,6 +6,7 @@ import 'katex/dist/katex.min.css';
 import ChoiceButtons from './ChoiceButtons';
 import TrascinaAbbina from './TrascinaAbbina';
 import FormaGruppi from './FormaGruppi';
+import Bilancia from './Bilancia';
 import Feedback from './Feedback';
 
 const CATEGORIA_EMOJI = {
@@ -96,6 +97,16 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
           gruppi={problema.gruppi}
           onRisposta={handleTrascina}
           completato={corretto === true}
+        />
+      )}
+
+      {tipo === 'bilancia' && (
+        <Bilancia
+          pesoSinistro={problema.peso_sinistro}
+          pesiDisponibili={problema.pesi_disponibili}
+          onRisposta={handleTrascina}
+          completato={corretto === true}
+          impossibile={problema.impossibile ?? false}
         />
       )}
 

@@ -430,6 +430,124 @@ body {
   cursor: pointer;
 }
 
+/* ── BILANCIA ── */
+.bilancia-container { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+
+.bilancia-visual {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.bilancia-asta {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 340px;
+  transition: transform 0.4s ease;
+  transform-origin: center bottom;
+  position: relative;
+}
+
+.bilancia-centro {
+  font-size: 1.4rem;
+  color: #888;
+  padding-bottom: 0.2rem;
+}
+
+.bilancia-piatto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  width: 130px;
+}
+
+.piatto-disco { font-size: 2rem; }
+.piatto-peso { font-size: 1.1rem; font-weight: 900; color: var(--blu); }
+
+.piatto-pesi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.3rem;
+  min-height: 32px;
+}
+
+.peso-sul-piatto {
+  background: var(--viola);
+  color: white;
+  border-radius: 50px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.peso-sul-piatto:hover { background: var(--rosso); }
+
+.piatto-somma { font-size: 1rem; font-weight: 900; color: var(--viola); min-height: 1.2rem; }
+
+.bilancia-base { font-size: 1.8rem; color: #888; margin-top: -0.3rem; }
+
+.bilancia-stato {
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+}
+.stato-ok { background: #e8fdf5; color: var(--verde); }
+.stato-troppo { background: #fff0f3; color: var(--rosso); }
+.stato-poco { background: #fff8e1; color: #f59e0b; }
+
+.pesi-disponibili {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.peso-chip {
+  background: var(--blu);
+  color: white;
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: grab;
+  user-select: none;
+  transition: transform 0.1s;
+}
+.peso-chip:hover { transform: scale(1.08); background: var(--viola); }
+
+.bilancia-drop-zone {
+  width: 100%;
+  border: 3px dashed #ccc;
+  border-radius: var(--raggio);
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+  font-weight: 700;
+}
+
+.bilancia-azioni { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+.btn-impossibile {
+  background: var(--rosso);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-impossibile:hover { background: #c0392b; }
+
 /* ── FORMA GRUPPI ── */
 .gruppi-container { display: flex; flex-direction: column; gap: 1.2rem; }
 
