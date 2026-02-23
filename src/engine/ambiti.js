@@ -1,7 +1,8 @@
 export const AMBITI = [
   { id: 'matematica', label: 'Matematica',  emoji: '🔢', categorie: ['operazioni'] },
   { id: 'scienze',    label: 'Scienze',     emoji: '🔬', categorie: ['scienza'] },
-  { id: 'logica',     label: 'Logica',      emoji: '🧠', categorie: ['logica'] },
+  { id: 'logica',          label: 'Logica',           emoji: '🧠', categorie: ['logica'] },
+  { id: 'pensiero-critico', label: 'Pensiero Critico', emoji: '🔍', categorie: ['pensiero-critico'] },
   { id: 'geometria',  label: 'Geometria',   emoji: '📐', categorie: ['geometria'] },
   { id: 'fisica',     label: 'Fisica',      emoji: '⚡', categorie: ['fisica'] },
   { id: 'italiano',   label: 'Italiano',    emoji: '📖', categorie: ['italiano'] },

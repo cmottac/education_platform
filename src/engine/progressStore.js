@@ -56,12 +56,12 @@ export const recordResult = (state, problemId, tentativi, puntiBase, problemi = 
 
 const BADGES_STATICI = [
   { id: 'primo_passo',        label: '🌟 Primo Passo',          condizione: (s) => Object.keys(s.completed).length >= 1 },
-  { id: 'cinque_problemi',    label: '🎯 5 Problemi risolti',   condizione: (s) => Object.keys(s.completed).length >= 5 },
-  { id: 'dieci_problemi',     label: '🏆 10 Problemi risolti',  condizione: (s) => Object.keys(s.completed).length >= 10 },
-  { id: 'meta_percorso',      label: '🚀 Metà percorso!',       condizione: (s) => Object.keys(s.completed).length >= 15 },
-  { id: 'quasi_esperto',      label: '🔥 Quasi esperto!',       condizione: (s) => Object.keys(s.completed).length >= 22 },
-  { id: 'duecento_punti',     label: '💯 200 Punti',            condizione: (s) => s.punteggio >= 200 },
-  { id: 'quattrocento_punti', label: '💎 400 Punti',            condizione: (s) => s.punteggio >= 400 },
+  { id: 'quarto_percorso',    label: '🎯 25% completato',       condizione: (s, p) => p.length > 0 && Object.keys(s.completed).length >= Math.ceil(p.length * 0.25) },
+  { id: 'meta_percorso',      label: '🚀 Metà percorso!',       condizione: (s, p) => p.length > 0 && Object.keys(s.completed).length >= Math.ceil(p.length * 0.50) },
+  { id: 'quasi_esperto',      label: '🔥 75% completato!',      condizione: (s, p) => p.length > 0 && Object.keys(s.completed).length >= Math.ceil(p.length * 0.75) },
+  { id: 'tutti_problemi',     label: '🎓 Percorso completato!', condizione: (s, p) => p.length > 0 && Object.keys(s.completed).length >= p.length },
+  { id: 'trenta_percento',    label: '💯 30% dei punti',        condizione: (s, p) => { const max = p.reduce((a, pr) => a + (pr.punti ?? 10) + 5, 0); return max > 0 && s.punteggio >= max * 0.30; } },
+  { id: 'settanta_percento',  label: '💎 70% dei punti',        condizione: (s, p) => { const max = p.reduce((a, pr) => a + (pr.punti ?? 10) + 5, 0); return max > 0 && s.punteggio >= max * 0.70; } },
   { id: 'tre_stelle_fila',    label: '⭐ 3 risposte perfette',  condizione: (s) => s.streak >= 3 },
   { id: 'sei_stelle_fila',    label: '⭐⭐ 6 risposte perfette', condizione: (s) => s.streak >= 6 },
 ];
