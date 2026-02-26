@@ -6,6 +6,7 @@ import ProblemCard from './components/ProblemCard';
 import Dashboard from './components/Dashboard';
 import Benvenuto from './components/Benvenuto';
 import SceltaAmbito from './components/SceltaAmbito';
+import Insegnante from './components/Insegnante';
 import './styles/app.css';
 
 const tuttiProblemi = loadProblems();
@@ -15,13 +16,15 @@ export default function App() {
   const [ambitoAttivo, setAmbitoAttivo] = useState(null);
   const [problemaCorrenteId, setProblemaCorrenteId] = useState(null);
   const [dashboardAperta, setDashboardAperta] = useState(false);
+  const [insegnanteAperto, setInsegnanteAperto] = useState(false);
+  const [problemiAttivi, setProblemiAttivi] = useState(tuttiProblemi);
   const [nuoviBadge, setNuoviBadge] = useState([]);
   const [cercaAperto, setCercaAperto] = useState(false);
   const [cercaQuery, setCercaQuery] = useState('');
 
   const nome = progress.nome;
 
-  const problemiFiltrati = ambitoAttivo ? problemiPerAmbito(tuttiProblemi, ambitoAttivo) : [];
+  const problemiFiltrati = ambitoAttivo ? problemiPerAmbito(problemiAttivi, ambitoAttivo) : [];
 
   const problemaCorrente = (() => {
     if (!ambitoAttivo) return null;
@@ -33,7 +36,7 @@ export default function App() {
   })();
 
   const problemiCercati = cercaQuery.trim()
-    ? tuttiProblemi.filter((p) =>
+    ? problemiAttivi.filter((p) =>
         p.id.includes(cercaQuery.trim()) ||
         p.titolo.toLowerCase().includes(cercaQuery.trim().toLowerCase())
       )
@@ -63,13 +66,13 @@ export default function App() {
       setNuoviBadge([]);
       return;
     }
-    const { nuovoStato, puntiGuadagnati, stelle, bonusStreak } = recordResult(progress, id, tentativi, puntiBase, tuttiProblemi);
+    const { nuovoStato, puntiGuadagnati, stelle, bonusStreak } = recordResult(progress, id, tentativi, puntiBase, problemiAttivi);
     const badgeNuovi = nuovoStato.badges.filter((b) => !progress.badges.includes(b));
     setProblemaCorrenteId(id);
     setProgress(nuovoStato);
     setNuoviBadge(badgeNuovi);
     return { puntiGuadagnati, stelle, bonusStreak };
-  }, [progress]);
+  }, [progress, problemiAttivi]);
 
   const handleReset = () => {
     resetProgress();
@@ -77,6 +80,13 @@ export default function App() {
     setAmbitoAttivo(null);
     setProblemaCorrenteId(null);
     setDashboardAperta(false);
+  };
+
+  const handleInsegnanteConferma = (selezionati) => {
+    setProblemiAttivi(selezionati);
+    setAmbitoAttivo(null);
+    setProblemaCorrenteId(null);
+    setInsegnanteAperto(false);
   };
 
   if (!nome) return <Benvenuto onConferma={handleNome} />;
@@ -115,8 +125,12 @@ export default function App() {
             )}
           </div>
 
+          <button className="btn-dashboard" onClick={() => setInsegnanteAperto(true)}>
+            👩🏫 Insegnante
+          </button>
+
           <button className="btn-dashboard" onClick={() => setDashboardAperta(true)}>
-            👨‍👩‍👦 Genitore
+            👨👩👦 Genitore
           </button>
         </div>
       </header>
@@ -128,10 +142,16 @@ export default function App() {
       )}
 
       <main className="app-main">
-        {dashboardAperta ? (
+        {insegnanteAperto ? (
+          <Insegnante
+            tuttiProblemi={tuttiProblemi}
+            onConferma={handleInsegnanteConferma}
+            onChiudi={() => setInsegnanteAperto(false)}
+          />
+        ) : dashboardAperta ? (
           <Dashboard
             progress={progress}
-            problemi={tuttiProblemi}
+            problemi={problemiAttivi}
             nome={nome}
             onReset={handleReset}
             onChiudi={() => setDashboardAperta(false)}
@@ -139,7 +159,7 @@ export default function App() {
         ) : !ambitoAttivo ? (
           <SceltaAmbito
             nome={nome}
-            problemi={tuttiProblemi}
+            problemi={problemiAttivi}
             progress={progress}
             ambitoAttivo={ambitoAttivo}
             onScelta={handleAmbitoScelta}

@@ -253,6 +253,70 @@ body {
   align-self: flex-start;
 }
 
+/* ── INSEGNANTE ── */
+.insegnante {
+  background: var(--card);
+  border-radius: var(--raggio);
+  padding: 2rem;
+  max-width: 760px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.insegnante-hint { color: #888; font-size: 0.95rem; margin-bottom: 1.2rem; }
+
+.insegnante-ambito { margin-bottom: 1.5rem; }
+
+.insegnante-ambito-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--viola);
+  padding: 0.4rem 0;
+  border-bottom: 2px solid var(--sfondo);
+  margin-bottom: 0.5rem;
+}
+
+.insegnante-check-tutti {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #888;
+  cursor: pointer;
+}
+
+.insegnante-riga {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  transition: background 0.1s;
+  cursor: grab;
+}
+.insegnante-riga:hover { background: var(--sfondo); }
+.insegnante-riga.drag-over { background: #eef1ff; border: 2px dashed var(--blu); }
+
+.drag-handle { color: #ccc; font-size: 1.1rem; cursor: grab; user-select: none; }
+.insegnante-id { font-size: 0.75rem; background: var(--blu); color: white; border-radius: 50px; padding: 0.1rem 0.5rem; white-space: nowrap; }
+.insegnante-titolo { flex: 1; font-size: 0.95rem; font-weight: 700; }
+.insegnante-tipo { font-size: 0.75rem; background: var(--sfondo); color: #888; border-radius: 50px; padding: 0.2rem 0.6rem; white-space: nowrap; }
+
+.insegnante-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--sfondo);
+  font-weight: 700;
+  color: #888;
+}
+
 /* ── CERCA / VAI A ── */
 .cerca-wrapper { position: relative; }
 
