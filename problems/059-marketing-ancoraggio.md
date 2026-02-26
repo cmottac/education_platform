@@ -12,7 +12,7 @@ spiegazione: "Il prezzo 'originale' di 100€ lo ha deciso il negozio stesso —
 
 Il negozio di giocattoli espone una scatola di LEGO con un cartellino:
 
-~~100€~~ **50€ — OFFERTA SPECIALE!**
+**OFFERTA SPECIALE DA NON PERDERE! IL PREZZO ERA 100€, ORA E' 50€**
 
 Luca vuole comprarla. Il papà dice: *"Guarda che affare, costa la metà!"*
 
