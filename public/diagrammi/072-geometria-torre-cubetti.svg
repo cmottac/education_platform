@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="240" viewBox="0 0 300 240" role="img">
+  <title>Una costruzione di cubetti tutti uguali vista dall'alto e di lato: dietro una colonna alta, ai lati e davanti colonne più basse.</title>
+  <rect x="0" y="0" width="300" height="240" fill="#ffffff"/>
+  <g stroke="#1a1a2e" stroke-width="1.5" stroke-linejoin="round">
+    <!-- cubetto (0,0,0) -->
+    <polygon fill="#ffd166" points="150,100 184.64,120 150,140 115.36,120"/>
+    <polygon fill="#f4a259" points="184.64,160 150,180 150,140 184.64,120"/>
+    <polygon fill="#e07a3f" points="115.36,160 150,180 150,140 115.36,120"/>
+    <!-- cubetto (0,0,1) -->
+    <polygon fill="#ffd166" points="150,60 184.64,80 150,100 115.36,80"/>
+    <polygon fill="#f4a259" points="184.64,120 150,140 150,100 184.64,80"/>
+    <polygon fill="#e07a3f" points="115.36,120 150,140 150,100 115.36,80"/>
+    <!-- cubetto (1,0,0) -->
+    <polygon fill="#ffd166" points="184.64,120 219.28,140 184.64,160 150,140"/>
+    <polygon fill="#f4a259" points="219.28,180 184.64,200 184.64,160 219.28,140"/>
+    <polygon fill="#e07a3f" points="150,180 184.64,200 184.64,160 150,140"/>
+    <!-- cubetto (0,1,0) -->
+    <polygon fill="#ffd166" points="115.36,120 150,140 115.36,160 80.72,140"/>
+    <polygon fill="#f4a259" points="150,180 115.36,200 115.36,160 150,140"/>
+    <polygon fill="#e07a3f" points="80.72,180 115.36,200 115.36,160 80.72,140"/>
+    <!-- cubetto (0,0,2) -->
+    <polygon fill="#ffd166" points="150,20 184.64,40 150,60 115.36,40"/>
+    <polygon fill="#f4a259" points="184.64,80 150,100 150,60 184.64,40"/>
+    <polygon fill="#e07a3f" points="115.36,80 150,100 150,60 115.36,40"/>
+    <!-- cubetto (1,0,1) -->
+    <polygon fill="#ffd166" points="184.64,80 219.28,100 184.64,120 150,100"/>
+    <polygon fill="#f4a259" points="219.28,140 184.64,160 184.64,120 219.28,100"/>
+    <polygon fill="#e07a3f" points="150,140 184.64,160 184.64,120 150,100"/>
+    <!-- cubetto (0,1,1) -->
+    <polygon fill="#ffd166" points="115.36,80 150,100 115.36,120 80.72,100"/>
+    <polygon fill="#f4a259" points="150,140 115.36,160 115.36,120 150,100"/>
+    <polygon fill="#e07a3f" points="80.72,140 115.36,160 115.36,120 80.72,100"/>
+    <!-- cubetto (1,1,0) -->
+    <polygon fill="#ffd166" points="150,140 184.64,160 150,180 115.36,160"/>
+    <polygon fill="#f4a259" points="184.64,200 150,220 150,180 184.64,160"/>
+    <polygon fill="#e07a3f" points="115.36,200 150,220 150,180 115.36,160"/>
+  </g>
+</svg>

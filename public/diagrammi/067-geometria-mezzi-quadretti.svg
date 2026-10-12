@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="240" viewBox="0 0 280 240" role="img">
+  <title>Una casetta su carta a quadretti: le pareti sono quadretti interi, il tetto ha un quadretto intero in mezzo e due mezzi quadretti triangolari ai lati.</title>
+  <rect x="0" y="0" width="280" height="240" fill="#ffffff"/>
+  <!-- carta a quadretti: 6 colonne e 5 righe -->
+  <g stroke="#c9d3f5" stroke-width="1">
+    <line x1="20" y1="20" x2="20" y2="220"/>
+    <line x1="60" y1="20" x2="60" y2="220"/>
+    <line x1="100" y1="20" x2="100" y2="220"/>
+    <line x1="140" y1="20" x2="140" y2="220"/>
+    <line x1="180" y1="20" x2="180" y2="220"/>
+    <line x1="220" y1="20" x2="220" y2="220"/>
+    <line x1="260" y1="20" x2="260" y2="220"/>
+    <line x1="20" y1="20" x2="260" y2="20"/>
+    <line x1="20" y1="60" x2="260" y2="60"/>
+    <line x1="20" y1="100" x2="260" y2="100"/>
+    <line x1="20" y1="140" x2="260" y2="140"/>
+    <line x1="20" y1="180" x2="260" y2="180"/>
+    <line x1="20" y1="220" x2="260" y2="220"/>
+  </g>
+  <!-- tetto: mezzo quadretto, quadretto intero, mezzo quadretto -->
+  <g fill="#ef476f" stroke="#1a1a2e" stroke-width="2" stroke-linejoin="round">
+    <polygon points="60,100 100,100 100,60"/>
+    <rect x="100" y="60" width="40" height="40"/>
+    <polygon points="140,60 140,100 180,100"/>
+  </g>
+  <!-- pareti: 6 quadretti interi -->
+  <g fill="#ffd166" stroke="#1a1a2e" stroke-width="2">
+    <rect x="60" y="100" width="40" height="40"/>
+    <rect x="100" y="100" width="40" height="40"/>
+    <rect x="140" y="100" width="40" height="40"/>
+    <rect x="60" y="140" width="40" height="40"/>
+    <rect x="100" y="140" width="40" height="40"/>
+    <rect x="140" y="140" width="40" height="40"/>
+  </g>
+</svg>

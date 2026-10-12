@@ -19,6 +19,11 @@ const CATEGORIA_EMOJI = {
   logica: '🧠',
   geometria: '📐',
   scienza: '🔬',
+  // Same icons as the ambiti in src/engine/ambiti.js
+  'pensiero-critico': '🔍',
+  fisica: '⚡',
+  italiano: '📖',
+  inglese: '🇬🇧',
 };
 
 export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) {
@@ -71,6 +76,15 @@ export default function ProblemCard({ problema, onCompleto, punteggioAttuale }) 
           {problema.body}
         </ReactMarkdown>
       </div>
+
+      {problema.diagramma && (
+        <figure className="problem-diagramma">
+          <img
+            src={`${import.meta.env.BASE_URL}diagrammi/${problema.diagramma}`}
+            alt={problema.diagramma_alt ?? `Disegno del problema: ${problema.titolo}`}
+          />
+        </figure>
+      )}
 
       {tipo === 'scelta-multipla' && (
         <ChoiceButtons

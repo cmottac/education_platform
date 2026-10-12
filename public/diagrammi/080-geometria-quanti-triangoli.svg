@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240" role="img">
+  <title>Un grande triangolo diviso da due linee che partono dalla punta in alto e scendono alla base, formando tre triangoli piccoli.</title>
+  <rect x="0" y="0" width="400" height="240" fill="#ffffff"/>
+  <g stroke="#1a1a2e" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- triangolo grande -->
+    <polygon points="200,20 20,220 380,220" fill="#d6b4e0"/>
+    <!-- due linee dalla punta alla base -->
+    <line x1="200" y1="20" x2="150" y2="220"/>
+    <line x1="200" y1="20" x2="260" y2="220"/>
+  </g>
+</svg>

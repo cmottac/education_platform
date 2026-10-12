@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img">
+  <title>Un quadrato grande diviso in 3 righe e 3 colonne di quadratini.</title>
+  <rect x="0" y="0" width="200" height="200" fill="#ffffff"/>
+  <!-- quadrato grande 3x3, quadratini da 50 px -->
+  <g fill="#fff1c7" stroke="#1a1a2e" stroke-width="3">
+    <rect x="25" y="25" width="50" height="50"/>
+    <rect x="75" y="25" width="50" height="50"/>
+    <rect x="125" y="25" width="50" height="50"/>
+    <rect x="25" y="75" width="50" height="50"/>
+    <rect x="75" y="75" width="50" height="50"/>
+    <rect x="125" y="75" width="50" height="50"/>
+    <rect x="25" y="125" width="50" height="50"/>
+    <rect x="75" y="125" width="50" height="50"/>
+    <rect x="125" y="125" width="50" height="50"/>
+  </g>
+</svg>

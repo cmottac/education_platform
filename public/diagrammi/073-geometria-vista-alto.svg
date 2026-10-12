@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="340" height="300" viewBox="0 0 340 300" role="img">
+  <title>Una costruzione di cubetti appoggiata sul tavolo, fatta di colonne di altezze diverse. Una freccia dall'alto indica il punto di vista dell'uccellino.</title>
+  <rect x="0" y="0" width="340" height="300" fill="#ffffff"/>
+  <!-- punto di vista dall'alto -->
+  <g font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#1a1a2e">
+    <text x="170" y="24" text-anchor="middle">occhio dell'uccellino</text>
+  </g>
+  <g stroke="#7b2d8b" stroke-width="3" stroke-linecap="round" fill="none">
+    <line x1="170" y1="36" x2="170" y2="88"/>
+    <polyline points="161,78 170,90 179,78" stroke-linejoin="round"/>
+  </g>
+  <g stroke="#1a1a2e" stroke-width="1.5" stroke-linejoin="round">
+    <!-- cubetto (0,0,0) -->
+    <polygon fill="#a9b8f5" points="153,160 187.64,180 153,200 118.36,180"/>
+    <polygon fill="#6f86ea" points="187.64,220 153,240 153,200 187.64,180"/>
+    <polygon fill="#4361ee" points="118.36,220 153,240 153,200 118.36,180"/>
+    <!-- cubetto (0,0,1) -->
+    <polygon fill="#a9b8f5" points="153,120 187.64,140 153,160 118.36,140"/>
+    <polygon fill="#6f86ea" points="187.64,180 153,200 153,160 187.64,140"/>
+    <polygon fill="#4361ee" points="118.36,180 153,200 153,160 118.36,140"/>
+    <!-- cubetto (1,0,0) -->
+    <polygon fill="#a9b8f5" points="187.64,180 222.28,200 187.64,220 153,200"/>
+    <polygon fill="#6f86ea" points="222.28,240 187.64,260 187.64,220 222.28,200"/>
+    <polygon fill="#4361ee" points="153,240 187.64,260 187.64,220 153,200"/>
+    <!-- cubetto (0,1,0) -->
+    <polygon fill="#a9b8f5" points="118.36,180 153,200 118.36,220 83.72,200"/>
+    <polygon fill="#6f86ea" points="153,240 118.36,260 118.36,220 153,200"/>
+    <polygon fill="#4361ee" points="83.72,240 118.36,260 118.36,220 83.72,200"/>
+    <!-- cubetto (2,0,0) -->
+    <polygon fill="#a9b8f5" points="222.28,200 256.92,220 222.28,240 187.64,220"/>
+    <polygon fill="#6f86ea" points="256.92,260 222.28,280 222.28,240 256.92,220"/>
+    <polygon fill="#4361ee" points="187.64,260 222.28,280 222.28,240 187.64,220"/>
+    <!-- cubetto (0,1,1) -->
+    <polygon fill="#a9b8f5" points="118.36,140 153,160 118.36,180 83.72,160"/>
+    <polygon fill="#6f86ea" points="153,200 118.36,220 118.36,180 153,160"/>
+    <polygon fill="#4361ee" points="83.72,200 118.36,220 118.36,180 83.72,160"/>
+    <!-- cubetto (0,1,2) -->
+    <polygon fill="#a9b8f5" points="118.36,100 153,120 118.36,140 83.72,120"/>
+    <polygon fill="#6f86ea" points="153,160 118.36,180 118.36,140 153,120"/>
+    <polygon fill="#4361ee" points="83.72,160 118.36,180 118.36,140 83.72,120"/>
+  </g>
+</svg>

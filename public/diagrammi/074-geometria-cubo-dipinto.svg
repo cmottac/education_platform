@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320" role="img">
+  <title>Un grande cubo formato da 3 per 3 per 3 cubetti, dipinto di rosso all'esterno.</title>
+  <rect x="0" y="0" width="320" height="320" fill="#ffffff"/>
+  <!-- cubo grande 3x3x3: si vedono 3 facce, ognuna con 9 quadretti -->
+  <g stroke="#1a1a2e" stroke-width="1.5" stroke-linejoin="round">
+    <!-- faccia sopra: 9 quadretti -->
+    <polygon fill="#f57b96" points="160,40 194.64,60 160,80 125.36,60"/>
+    <polygon fill="#f57b96" points="125.36,60 160,80 125.36,100 90.72,80"/>
+    <polygon fill="#f57b96" points="90.72,80 125.36,100 90.72,120 56.08,100"/>
+    <polygon fill="#f57b96" points="194.64,60 229.28,80 194.64,100 160,80"/>
+    <polygon fill="#f57b96" points="160,80 194.64,100 160,120 125.36,100"/>
+    <polygon fill="#f57b96" points="125.36,100 160,120 125.36,140 90.72,120"/>
+    <polygon fill="#f57b96" points="229.28,80 263.92,100 229.28,120 194.64,100"/>
+    <polygon fill="#f57b96" points="194.64,100 229.28,120 194.64,140 160,120"/>
+    <polygon fill="#f57b96" points="160,120 194.64,140 160,160 125.36,140"/>
+    <!-- faccia a destra: 9 quadretti -->
+    <polygon fill="#ef476f" points="263.92,220 229.28,240 229.28,200 263.92,180"/>
+    <polygon fill="#ef476f" points="263.92,180 229.28,200 229.28,160 263.92,140"/>
+    <polygon fill="#ef476f" points="263.92,140 229.28,160 229.28,120 263.92,100"/>
+    <polygon fill="#ef476f" points="229.28,240 194.64,260 194.64,220 229.28,200"/>
+    <polygon fill="#ef476f" points="229.28,200 194.64,220 194.64,180 229.28,160"/>
+    <polygon fill="#ef476f" points="229.28,160 194.64,180 194.64,140 229.28,120"/>
+    <polygon fill="#ef476f" points="194.64,260 160,280 160,240 194.64,220"/>
+    <polygon fill="#ef476f" points="194.64,220 160,240 160,200 194.64,180"/>
+    <polygon fill="#ef476f" points="194.64,180 160,200 160,160 194.64,140"/>
+    <!-- faccia a sinistra: 9 quadretti -->
+    <polygon fill="#c9304f" points="56.08,220 90.72,240 90.72,200 56.08,180"/>
+    <polygon fill="#c9304f" points="56.08,180 90.72,200 90.72,160 56.08,140"/>
+    <polygon fill="#c9304f" points="56.08,140 90.72,160 90.72,120 56.08,100"/>
+    <polygon fill="#c9304f" points="90.72,240 125.36,260 125.36,220 90.72,200"/>
+    <polygon fill="#c9304f" points="90.72,200 125.36,220 125.36,180 90.72,160"/>
+    <polygon fill="#c9304f" points="90.72,160 125.36,180 125.36,140 90.72,120"/>
+    <polygon fill="#c9304f" points="125.36,260 160,280 160,240 125.36,220"/>
+    <polygon fill="#c9304f" points="125.36,220 160,240 160,200 125.36,180"/>
+    <polygon fill="#c9304f" points="125.36,180 160,200 160,160 125.36,140"/>
+  </g>
+</svg>

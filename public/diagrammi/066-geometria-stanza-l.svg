@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="200" viewBox="0 0 240 200" role="img">
+  <title>Pavimento a forma di L fatto di piastrelle quadrate: due righe corte in alto e due righe più lunghe in basso.</title>
+  <rect x="0" y="0" width="240" height="200" fill="#ffffff"/>
+  <g fill="#ffd166" stroke="#1a1a2e" stroke-width="2">
+    <!-- riga 0: 3 piastrelle -->
+    <rect x="20" y="20" width="40" height="40"/>
+    <rect x="60" y="20" width="40" height="40"/>
+    <rect x="100" y="20" width="40" height="40"/>
+    <!-- riga 1: 3 piastrelle -->
+    <rect x="20" y="60" width="40" height="40"/>
+    <rect x="60" y="60" width="40" height="40"/>
+    <rect x="100" y="60" width="40" height="40"/>
+    <!-- riga 2: 5 piastrelle -->
+    <rect x="20" y="100" width="40" height="40"/>
+    <rect x="60" y="100" width="40" height="40"/>
+    <rect x="100" y="100" width="40" height="40"/>
+    <rect x="140" y="100" width="40" height="40"/>
+    <rect x="180" y="100" width="40" height="40"/>
+    <!-- riga 3: 5 piastrelle -->
+    <rect x="20" y="140" width="40" height="40"/>
+    <rect x="60" y="140" width="40" height="40"/>
+    <rect x="100" y="140" width="40" height="40"/>
+    <rect x="140" y="140" width="40" height="40"/>
+    <rect x="180" y="140" width="40" height="40"/>
+  </g>
+</svg>
