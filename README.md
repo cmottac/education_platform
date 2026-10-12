@@ -1,5 +1,35 @@
 # React + Vite
 
+## Avvio in locale
+
+Dalla cartella del progetto:
+
+```bash
+npm install   # solo la prima volta, o se mancano dipendenze
+npm run dev
+```
+
+Poi apri nel browser:
+
+```
+http://localhost:5173/education_platform/
+```
+
+Il suffisso `/education_platform/` è necessario perché in `vite.config.js` è impostato `base: '/education_platform/'` (serve per il deploy su GitHub Pages). Aprendo solo `http://localhost:5173` la pagina risulta vuota. L'URL esatto viene comunque mostrato nel terminale all'avvio; se la porta 5173 è occupata, Vite ne usa un'altra.
+
+Per fermare il server: `Ctrl+C` nel terminale.
+
+### Provare la build di produzione
+
+```bash
+npm run build
+npm run preview
+```
+
+Poi apri `http://localhost:4173/education_platform/`.
+
+---
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
